@@ -13,6 +13,11 @@
     overflow: auto;
 }
 
+#Message-List {
+    height: 70vh;
+    overflow: auto;
+}
+
 /*定義滾動條高寬及背景 高寬分別對應橫豎滾動條的尺寸*/  
 ::-webkit-scrollbar  
 {  
