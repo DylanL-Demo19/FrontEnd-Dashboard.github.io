@@ -25,7 +25,7 @@ function WebSocketTest() {
         console.log("您的浏览器支持 WebSocket!");
 
         $.ajax({
-            url: "http://127.0.0.1:8000",
+            url: "http://127.0.0.1:9453/WebSocket",
             method: "GET",
             // dataType:,
             // data:
@@ -35,29 +35,29 @@ function WebSocketTest() {
         });
 
         // 打开一个 web socket
-        var ws = new WebSocket("ws://127.0.0.1:8001");
+    //     var ws = new WebSocket("ws://127.0.0.1:8001");
 
-        console.log(ws.readyState);
+    //     console.log(ws.readyState);
 
-        ws.onopen = function() {
-            // Web Socket 已连接上，使用 send() 方法发送数据
-            ws.send("測試");
-            ws.send(textToArrayBuffer("測試"));
-            console.log("数据发送中...");
-        };
+    //     ws.onopen = function() {
+    //         // Web Socket 已连接上，使用 send() 方法发送数据
+    //         ws.send("測試");
+    //         ws.send(textToArrayBuffer("測試"));
+    //         console.log("数据发送中...");
+    //     };
 
-        ws.onmessage = function(receiveData) {
-            console.log(receiveData.data);
-            console.log("数据已接收...");
-        };
+    //     ws.onmessage = function(receiveData) {
+    //         console.log(receiveData.data);
+    //         console.log("数据已接收...");
+    //     };
 
-        // ws.onclose = function() {
-        //     // 关闭 websocket
-        //     alert("连接已关闭...");
-        // };
-    } else {
-        // 浏览器不支持 WebSocket
-        alert("您的浏览器不支持 WebSocket!");
+    //     // ws.onclose = function() {
+    //     //     // 关闭 websocket
+    //     //     alert("连接已关闭...");
+    //     // };
+    // } else {
+    //     // 浏览器不支持 WebSocket
+    //     alert("您的浏览器不支持 WebSocket!");
     }
 }
 
